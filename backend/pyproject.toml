@@ -1,0 +1,34 @@
+[project]
+name = ""
+version = ""
+description = ""
+authors = [
+    {name = "Aditya S Rao", email = "aditya.s.rao12@gmail.com"},
+]
+dependencies = []
+requires-python = ">=3.11"
+license = {text = "MIT"}
+[project.optional-dependencies]
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool.pdm.dev-dependencies]
+dev = [
+    "black>=22.10.0",
+    "isort>=5.10.1",
+    "djhtml>=1.5.2",
+    "mypy>=0.982",
+    "flake8>=5.0.4",
+]
+
+[tool.black]
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+
+[flake8]
+max-line-length = 100
+extend-ignore = E203
